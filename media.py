@@ -4,15 +4,15 @@
 
 
 class Movie():
-"""A simple Class based on common movie data
-This class provides the following attributes:
-	title (str) - original movie title
-	overview (str) - basic plot overview
-	duration (str) - runtime in minutes
-	poser_image_url (str) - url to database location
-	trailer_youtube_url (str) - url to YouTube trailer
-	rating (str) - either US rating or N/A if no data
-"""
+	"""A simple Class based on common movie data
+	This class provides the following attributes:
+		title (str) - original movie title
+		overview (str) - basic plot overview
+		duration (str) - runtime in minutes
+		poser_image_url (str) - url to database location
+		trailer_youtube_url (str) - url to YouTube trailer
+		rating (str) - either US rating or N/A if no data
+	"""
 	# Class Variables
 	VALID_RATINGS = ['N/A', 'G', 'PG', 'PG-13', 'R']
 

@@ -9,6 +9,11 @@ movie information from their API. The tmdb_api class is
 a wrapper which more effeciently gathers common information.
 """
 
+# This is required to build the path for posters and logos
+image_path = 'http://image.tmdb.org/t/p/original'
+
+# This is required to build the path for YouTube trailers and clips
+youtube_path = 'http://youtube.com/watch?v='
 
 
 class tmdb_api():
@@ -40,12 +45,6 @@ class tmdb_api():
 
 	'''
 
-	# This is required to build the path for posters and logos
-	IMAGE_PATH = 'http://image.tmdb.org/t/p/original'
-
-	# This is required to build the path for YouTube trailers and clips
-	YOUTUBE_PATH = 'http://youtube.com/watch?v='
-
 	def __init__(self, movie_id):
 		self.API_KEY 	= tmdb.API_KEY = 'de26bf8f90a538024a107e61f2a8b9e3'
 		self.movie_id 	= movie_id
@@ -53,9 +52,9 @@ class tmdb_api():
 		self.response 	= self.api_caller.info()
 		self.title 		= self.api_caller.title
 		self.overview 	= self.api_caller.overview
-		self.poster 	= IMAGE_PATH + str(self.api_caller.poster_path)
+		self.poster 	= image_path + str(self.api_caller.poster_path)
 		self.rating 	= self.us_rating(self.api_caller)
-		self.trailer 	= YOUTUBE_PATH + self.trailer_key(self.api_caller)
+		self.trailer 	= youtube_path + self.trailer_key(self.api_caller)
 		self.duration	= self.api_caller.runtime
 		self.common_info= {'title':		self.title,
 						   'overview':	self.overview,
