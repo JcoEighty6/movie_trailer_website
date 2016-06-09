@@ -6,11 +6,11 @@ This project incorporates a custom wrapper class for easy access to The Movie Da
 and requires an API key in order for the classes to populate data to the website.
 
 To obtain an API key go to the [SignUp Page](https://www.themoviedb.org/account/signup) 
-and register for and account. Once registered navigate to API and request a key.
+and register for an account. Once registered navigate to API and request a key.
 
 Once you have a key isntall the python tmdb module using pip or easy install:
 '''
-	pip install tmdbsimple
+pip install tmdbsimple
 '''
 
 After you have installed that just place your API key into the tmdb_api.py file
